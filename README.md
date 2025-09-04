@@ -1,3 +1,4 @@
+https://quran-research-assistant.vercel.app/
 # Quran Research Assistant
 
 A respectful, Quran‑only research assistant that answers questions about Quranic verses, themes, words, and structure. The assistant provides concise, well‑cited responses with clear Surah:Ayah references and helpful verification links.
