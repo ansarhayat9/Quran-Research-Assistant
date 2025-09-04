@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: quran-research-assistant
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # IMPORTANT: Set GOOGLE_API_KEY value in Render Dashboard after first deploy
+      - key: GOOGLE_API_KEY
+        sync: false
+    healthCheckPath: /
+    
+# Usage:
+# 1) Push this repo to GitHub.
+# 2) In Render, click "New" -> "Blueprint" and select this render.yaml from your repo.
+# 3) After deploy starts, open the service settings -> Environment -> Add GOOGLE_API_KEY.
+# 4) Re-deploy. Your app will be available at the service URL and serves both frontend and /api/ask.
